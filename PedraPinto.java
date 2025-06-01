@@ -39,7 +39,21 @@ public class PedraPinto {
     public static void verificar(int jogada1, int jogada2, int jogador1, int jogador2) {
         while (jogador1 < 3 || jogador2 < 3) {
         if((jogada1 == 0) || (jogada1 == 1) || (jogada1 == 2) || (jogada2 == 0) || (jogada2 == 1) || (jogada1 == 2)) {
-            
+           if (jogada1 == jogada2) {
+                imprimir("empate");
+            } else if ((jogada1 == 0 && jogada2 == 2) || (jogada1 == 1 && jogada2 == 0) || (jogada1 == 2 && jogada2 == 1)) {
+                jogador1++;
+                imprimir("jogador 1 venceu");
+            } else {
+                jogador2++;
+                imprimir("jogador 2 venceu");
+            }
+        } else {
+            imprimir("jogada inválida, tente novamente");
+            imprimir("digite a primeira jogada do jogador 1");
+            jogada1 = lerValorInt(jogada1);
+            imprimir("digite a segunda jogada do jogador 2");
+            jogada2 = lerValorInt2(jogada2);
         }
     }
     }
