@@ -13,6 +13,8 @@ public class QntNumParesImpares {
 
         contador = contadorParar(contador, qntNum);
 
+        verificador(valor, qntImpares, qntPares);
+
         imprimir("digite a quantidade de números desejados ");
         qntNum = lerQntNum(qntNum);
 
@@ -42,7 +44,7 @@ public class QntNumParesImpares {
         return qntNum;
     }
 
-    public static int verificador(int valor, int qntImpares, int qntPares) {
+    public static void verificador(int valor, int qntImpares, int qntPares) {
         if (valor %2 == 0) {
             valor = qntPares;
             qntPares = qntPares + 1;
@@ -51,7 +53,6 @@ public class QntNumParesImpares {
             qntImpares = qntImpares + 1;
         }
 
-        return 
     }
 
     public static int contadorParar(int contador, int qntNum) {

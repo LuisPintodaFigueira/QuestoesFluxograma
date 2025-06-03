@@ -9,7 +9,6 @@ public class PedraPinto {
         int jogador2 = 0;
         int jogada1 = 0;
         int jogada2 = 0;
-        String vencedor = null;
 
         imprimir("leve em consideração que pedra equivale a 0, papel equivale a 1 e tesoura equivale 2");
 
@@ -18,6 +17,8 @@ public class PedraPinto {
 
         imprimir("digite a segunda jogada do jogador 2");
         jogada2 = lerValorInt2(jogada2);
+
+        verificar(jogada1, jogada2, jogador1, jogador2);
     }
 
     public static void imprimir(String saida) {
